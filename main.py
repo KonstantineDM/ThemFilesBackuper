@@ -1,10 +1,13 @@
-from utility.pre_start import PreStart
+from utility.config import Config
 
-class MainClass:
+class App:
     def __init__(self):
         pass
-        
+
+    def main(self):
+        config = Config.initialize()
+        print('Started App')
 
 if __name__ == '__main__':
-    pre = PreStart()
-    pre.test()
+    app = App()
+    app.main()
